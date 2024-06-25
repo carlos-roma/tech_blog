@@ -4,9 +4,9 @@ const Sequelize = require('sequelize');
 
 let sequelize;
 
-if (process.env.CLEARDB_DATABASE_URL) {
+if (process.env.JAWSDB_URL) {
   // For deployment on Heroku
-  sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL);
+  sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   // For local development
   sequelize = new Sequelize(
